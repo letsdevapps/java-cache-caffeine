@@ -1,0 +1,12 @@
+
+# Build
+/target/
+bin/
+
+# IDEs
+.classpath
+.project
+.settings/
+
+# Maven shade
+dependency-reduced-pom.xml
