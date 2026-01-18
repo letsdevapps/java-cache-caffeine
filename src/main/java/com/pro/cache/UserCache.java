@@ -15,7 +15,7 @@ public class UserCache {
 	public UserCache(UserRepository repository) {
 		this.cache = Caffeine.newBuilder()
 				.maximumSize(1_000)
-				.expireAfterWrite(5, TimeUnit.MINUTES)
+				.expireAfterWrite(5, TimeUnit.MINUTES) // TTL definido
 				.recordStats() // registrar metricas
 				.build(repository::buscarPorId);
 	}
